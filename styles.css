@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0c0c1d, #1a1a2e);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff0080, #00ffcc, #ffff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  letter-spacing: 1.5px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #a0a0ff;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.illusions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1300px) {
+  .illusions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.illusion-card {
+  background: rgba(20, 20, 40, 0.7);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(100, 100, 255, 0.1);
+}
+
+.illusion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+.card-header {
+  padding: 20px 25px;
+  background: rgba(30, 30, 60, 0.9);
+  border-bottom: 1px solid rgba(100, 100, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.illusion-title {
+  font-size: 1.8rem;
+  color: #00ffcc;
+}
+
+.illusion-number {
+  background: rgba(0, 255, 204, 0.2);
+  color: #00ffcc;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.illusion-display {
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-controls {
+  padding: 20px 10px;
+  background: rgba(25, 25, 50, 0.8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+  border-top: 1px solid rgba(100, 100, 255, 0.1);
+}
+
+.control-btn {
+  background: rgba(40, 40, 80, 0.8);
+  border: 2px solid #6666ff;
+  color: #aaccff;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-btn:hover {
+  background: rgba(80, 80, 160, 0.8);
+  transform: translateY(-3px);
+}
+
+.control-btn.active {
+  background: rgba(80, 80, 160, 0.9);
+  box-shadow: 0 0 15px rgba(100, 100, 255, 0.7);
+}
+
+/* Illusion 1: Vortex Tunnel */
+.vortex {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 1000px;
+}
+
+.vortex-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+}
+
+/* Illusion 2: Motion Illusion */
+.motion-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 2px;
+  background-color: #000;
+}
+
+.motion-cell {
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Illusion 3: Spinning Dots */
+.spinning-dots-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.spinning-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: #ff3366;
+  box-shadow: 0 0 20px #ff3366;
+}
+
+/* Illusion 4: Vortex Tunne2 */
+#vortex2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 800px;
+}
+
+.vortex-ring2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px solid;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Illusion 5: Breathing Squares */
+.breathing-squares {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+  width: 250px;
+  height: 250px;
+}
+
+.breathing-square {
+  background: #ffff00;
+  border-radius: 5px;
+}
+
+/* Illusion 6: Hypnotic Spirals */
+.hypnotic-spiral {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.spiral-arm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 100px;
+  background: #ff00ff;
+  transform-origin: 0 0;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Illusion 7: Floating Circles */
+.floating-circles {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  box-shadow: 0 0 15px currentColor;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #6666aa;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(100, 100, 255, 0.1);
+  margin-top: 30px;
+}
+
+.instructions {
+  text-align: center;
+  margin: 20px 0 40px;
+  color: #88aaff;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.highlight {
+  color: #00ffcc;
+  font-weight: bold;
+}
